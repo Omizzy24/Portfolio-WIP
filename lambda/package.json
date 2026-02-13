@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-lambda",
+  "version": "1.0.0",
+  "description": "Lambda functions for portfolio",
+  "main": "contact-handler.js",
+  "dependencies": {
+    "aws-sdk": "^2.1500.0"
+  }
+}

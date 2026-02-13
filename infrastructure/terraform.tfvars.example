@@ -1,0 +1,4 @@
+aws_region       = "us-east-1"
+bucket_name      = "your-portfolio-bucket-name"
+sender_email     = "your-verified-email@example.com"
+recipient_email  = "omar.alshammary@proton.me"

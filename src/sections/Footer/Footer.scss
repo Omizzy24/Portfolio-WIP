@@ -1,0 +1,48 @@
+@import '../../styles/variables';
+
+.footer {
+  background: var(--bg-secondary);
+  padding: $spacing-lg 0;
+  border-top: 1px solid var(--bg-tertiary);
+  
+  &__content {
+    text-align: center;
+  }
+  
+  &__social {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-md;
+    margin-bottom: $spacing-md;
+    font-size: 1.5rem;
+    
+    a {
+      color: var(--text-secondary);
+      transition: all $transition-fast;
+      
+      &:hover {
+        color: var(--accent-primary);
+        transform: translateY(-3px);
+      }
+    }
+  }
+  
+  &__copyright {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  &__heart {
+    color: #ff4444;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}

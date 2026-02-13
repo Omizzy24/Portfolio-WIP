@@ -1,0 +1,59 @@
+@import '../../styles/variables';
+
+.about {
+  background: var(--bg-secondary);
+  
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  &__text {
+    p {
+      font-size: 1.125rem;
+      margin-bottom: $spacing-lg;
+      text-align: center;
+    }
+  }
+  
+  &__highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__highlight {
+    text-align: center;
+    padding: $spacing-md;
+    background: var(--bg-primary);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: transform $transition-fast;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    h3 {
+      font-size: 2.5rem;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: $spacing-xs;
+    }
+    
+    p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+  
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}

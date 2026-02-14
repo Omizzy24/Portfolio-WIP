@@ -9,11 +9,12 @@ export interface Project {
   liveUrl?: string;
   githubUrl?: string;
   featured: boolean;
+  impact?: string[];
 }
 
 export interface Skill {
   name: string;
-  category: 'frontend' | 'backend' | 'cloud' | 'data' | 'tools';
+  category: 'ai' | 'cloud' | 'data' | 'backend' | 'database' | 'devops' | 'frontend';
   level: number; // 1-5
   icon: string;
 }
@@ -32,4 +33,21 @@ export interface ContactFormData {
   email: string;
   subject: string;
   message: string;
+}
+
+export interface Highlight {
+  metric: string;
+  label: string;
+}
+
+export interface AboutMe {
+  name: string;
+  title: string;
+  subtitle: string;
+  bio: string;
+  email: string;
+  github: string;
+  linkedin: string;
+  resumeUrl: string;
+  highlights: Highlight[];
 }

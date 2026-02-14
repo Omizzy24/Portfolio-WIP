@@ -114,8 +114,33 @@
   
   &__description {
     color: var(--text-secondary);
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacing-sm;
     font-size: 0.9rem;
+  }
+  
+  &__impact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    margin-bottom: $spacing-sm;
+    padding: $spacing-sm;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-primary);
+  }
+  
+  &__impact-item {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    
+    &::before {
+      content: '✓';
+      color: var(--accent-primary);
+      font-weight: bold;
+      margin-right: 0.5rem;
+    }
   }
   
   &__technologies {

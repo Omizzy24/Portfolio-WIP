@@ -2,13 +2,24 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { skills } from '@/data/portfolio';
+import { Skill } from '@/types';
 import './Skills.scss';
 
 const Skills = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
   const [filter, setFilter] = useState<string>('all');
 
-  const categories = ['all', 'frontend', 'backend', 'cloud', 'data', 'tools'];
+  const categories = ['all', 'ai', 'cloud', 'data', 'backend', 'database', 'devops', 'frontend'];
+  const categoryLabels: Record<string, string> = {
+    all: 'All',
+    ai: 'AI/ML',
+    cloud: 'Cloud',
+    data: 'Data Engineering',
+    backend: 'Backend',
+    database: 'Databases',
+    devops: 'DevOps',
+    frontend: 'Frontend',
+  };
   
   const filteredSkills = filter === 'all' 
     ? skills 
@@ -33,7 +44,7 @@ const Skills = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          Skills & Technologies
+          Technical Expertise
         </motion.h2>
         
         <div className="skills__filters">
@@ -44,7 +55,7 @@ const Skills = () => {
               onClick={() => setFilter(category)}
               aria-pressed={filter === category}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {categoryLabels[category]}
             </button>
           ))}
         </div>
@@ -55,13 +66,13 @@ const Skills = () => {
           animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {filteredSkills.map((skill, index) => (
+          {filteredSkills.map((skill: Skill, index: number) => (
             <motion.div
               key={skill.name}
               className="skill-card"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.03 }}
             >
               <div className="skill-card__content">
                 <h3 className="skill-card__name">{skill.name}</h3>

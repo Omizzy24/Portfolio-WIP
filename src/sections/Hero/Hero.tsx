@@ -20,9 +20,9 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="hero__greeting">Hi, I'm</h1>
-          <h2 className="hero__name">{aboutMe.name}</h2>
-          <p className="hero__title">{aboutMe.title}</p>
+          <h1 className="hero__name">{aboutMe.name}</h1>
+          <h2 className="hero__title">{aboutMe.title}</h2>
+          <p className="hero__subtitle">{aboutMe.subtitle}</p>
           
           <div className="hero__cta">
             <button 
@@ -30,7 +30,7 @@ const Hero = () => {
               onClick={() => scrollToSection('projects')}
               aria-label="View my projects"
             >
-              View My Work
+              View Projects
             </button>
             <button 
               className="btn btn-outline"

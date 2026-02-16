@@ -51,11 +51,17 @@
   &__subtitle {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: var(--text-secondary);
-    margin-bottom: $spacing-lg;
+    margin-bottom: $spacing-xs;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
+  }
+  
+  &__location {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--text-tertiary);
+    margin-bottom: $spacing-lg;
   }
   
   &__cta {

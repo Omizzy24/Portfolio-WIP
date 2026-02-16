@@ -24,6 +24,7 @@ export interface Experience {
   company: string;
   position: string;
   duration: string;
+  location?: string;
   description: string[];
   technologies: string[];
 }
@@ -49,5 +50,33 @@ export interface AboutMe {
   github: string;
   linkedin: string;
   resumeUrl: string;
+  phone?: string;
+  location?: string;
+  website?: string;
   highlights: Highlight[];
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  school: string;
+  location: string;
+  duration: string;
+  gpa?: string;
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  code?: string;
+  date: string;
+  icon?: string;
+}
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  year: string;
 }

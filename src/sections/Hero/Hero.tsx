@@ -23,6 +23,9 @@ const Hero = () => {
           <h1 className="hero__name">{aboutMe.name}</h1>
           <h2 className="hero__title">{aboutMe.title}</h2>
           <p className="hero__subtitle">{aboutMe.subtitle}</p>
+          {aboutMe.location && (
+            <p className="hero__location">{aboutMe.location}</p>
+          )}
           
           <div className="hero__cta">
             <button 
